@@ -21,7 +21,7 @@ export default function SkillTag({ data, categories }: SkillTagProps) {
     competency >= 5
       ? 'skill-tag--lg'
       : competency >= 4
-        ? 'skill-tag--md'
+        ? 'skill-tag--IBRA'
         : 'skill-tag--sm';
 
   return (

@@ -17,34 +17,19 @@ export interface ContactItem {
 
 const data: ContactItem[] = [
   {
-    link: 'https://www.linkedin.com/in/michaelldangelo',
+    link: 'linkedin.com/in/alif-ibrahim-28096b37b',
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },
   {
-    link: 'https://github.com/mldangelo',
+    link: 'https://github.com/alifibrahim0825',
     label: 'GitHub',
     icon: faGithub,
   },
   {
-    link: 'https://x.com/dangelosaurus',
-    label: 'X',
-    icon: faTwitter,
-  },
-  {
-    link: 'https://angel.co/michael-d-angelo',
-    label: 'Angel List',
-    icon: faAngellist,
-  },
-  {
-    link: 'https://www.instagram.com/dangelosaurus/',
+    link: 'https://www.instagram.com/a.ibraa_?igsh=MW5uN3ZybDMzbWtjYw==',
     label: 'Instagram',
     icon: faInstagram,
-  },
-  {
-    link: 'https://facebook.com/d',
-    label: 'Facebook',
-    icon: faFacebookF,
   },
   {
     // One public address, shared with the contact CTA and JSON-LD.

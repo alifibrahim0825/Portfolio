@@ -19,19 +19,13 @@ export default function Hero() {
               {profile.employer}
             </a>
             , working on{' '}
-            <a href="https://promptfoo.dev" className="hero-highlight">
-              Promptfoo
+            <a href="https://www.energyx.co.id/" className="hero-highlight">
+              EnergyX369
             </a>{' '}
             and{' '}
-            <a
-              href="https://openai.com/index/codex-security-now-in-research-preview/"
-              className="hero-highlight"
-            >
-              Codex Security
-            </a>
-            . I help secure AI systems and use AI to find software
-            vulnerabilities. I co-founded Promptfoo before it joined OpenAI in
-            2026.
+           Vocational high school student passionate about technology,
+            software development, and cybersecurity. I enjoy building projects 
+            and exploring new technologies.
           </p>
 
           <div className="hero-cta">

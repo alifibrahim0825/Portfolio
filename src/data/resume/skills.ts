@@ -33,44 +33,9 @@ const skills: Skill[] = [
     category: ['ML Engineering'],
   },
   {
-    title: 'LLM Evaluation',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'AI Red-teaming',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM APIs',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'RAG',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
     title: 'Prompt Engineering',
     competency: 4,
     category: ['ML Engineering'],
-  },
-  {
-    title: 'Vector Databases',
-    competency: 4,
-    category: ['ML Engineering', 'Databases'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Pandas',
-    competency: 5,
-    category: ['ML Engineering', 'Data Engineering'],
   },
   // Web Development
   {
@@ -94,17 +59,7 @@ const skills: Skill[] = [
     competency: 4,
     category: ['Databases'],
   },
-  {
-    title: 'Redis',
-    competency: 3,
-    category: ['Databases'],
-  },
   // Infrastructure
-  {
-    title: 'AWS',
-    competency: 4,
-    category: ['Infrastructure'],
-  },
   {
     title: 'Docker',
     competency: 4,
@@ -114,11 +69,6 @@ const skills: Skill[] = [
     title: 'Kubernetes',
     competency: 3,
     category: ['Infrastructure'],
-  },
-  {
-    title: 'Observability',
-    competency: 4,
-    category: ['Infrastructure', 'ML Engineering'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

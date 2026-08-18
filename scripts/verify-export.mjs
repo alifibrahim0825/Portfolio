@@ -145,12 +145,12 @@ if (pages.length === 0) {
   process.exit(1);
 }
 
-const draftSlugs = walk(CONTENT, (name) => name.endsWith('.md'))
+const draftSlugs = walk(CONTENT, (name) => name.endsWith('.'))
   // Use the same YAML parser as the application. A line regex misses valid
   // forms such as `draft: true # keep private`, weakening the fault-injection
   // gate precisely when the route layer regresses.
   .filter((path) => matter(readFileSync(path, 'utf8')).data.draft === true)
-  .map((path) => basename(path, '.md'));
+  .map((path) => basename(path, '.'));
 
 function isDraftPath(pathname) {
   const route = routeForPublicPath(pathname) ?? pathname;
