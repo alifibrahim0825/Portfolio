@@ -39,14 +39,14 @@ function htmlPage({
     <meta property="og:site_name" content="Fixture site">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="${siteRoot}og.png">
+    <meta property="og:image" content="${siteRoot}AI.png">
     <meta property="og:image:alt" content="Fixture share card">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@fixture">
     <meta name="twitter:creator" content="@fixture">
     <meta name="twitter:title" content="Fixture">
     <meta name="twitter:description" content="Fixture description">
-    <meta name="twitter:image" content="${siteRoot}og.png">
+    <meta name="twitter:image" content="${siteRoot}AI.png">
   </head>
   <body>${content}</body>
 </html>`;
@@ -90,7 +90,7 @@ function createFixture({ basePath = '' } = {}) {
       `,
     }),
   );
-  write(root, 'out/og.png');
+  write(root, 'out/AI.png');
   write(root, 'out/images/photo.png');
   write(
     root,

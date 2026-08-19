@@ -7,8 +7,8 @@ describe('PostContent', () => {
   it('renders measured local images during server rendering', () => {
     const html = renderToStaticMarkup(
       <PostContent
-        content="![A social card](/og.png)"
-        imageSizes={{ '/og.png': { width: 1200, height: 630 } }}
+        content="![A social card](/AI.png)"
+        imageSizes={{ '/AI.png': { width: 1200, height: 630 } }}
       />,
     );
 

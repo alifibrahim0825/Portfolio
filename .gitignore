@@ -53,3 +53,13 @@ Thumbs.db
 .grunt/
 .lock-wscript
 nohup.out
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+
+!.env.example
