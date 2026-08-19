@@ -200,7 +200,7 @@ npm run og
 npm run og:check
 ```
 
-`npm run og` updates `public/AI.png` and `public/og.meta.json`. The image and
+`npm run og` updates `public/og.png` and `public/og.meta.json`. The image and
 metadata must stay in sync.
 
 ## Audit the result

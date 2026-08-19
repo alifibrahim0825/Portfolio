@@ -118,7 +118,7 @@ describe('parseImageSize', () => {
 
 describe('readImageSize', () => {
   it('reads a real public image and ignores its query and fragment', () => {
-    expect(readImageSize('/AI.png?version=1#card')).toEqual({
+    expect(readImageSize('/og.png?version=1#card')).toEqual({
       width: 1200,
       height: 630,
     });
@@ -154,22 +154,22 @@ describe('readImageSize', () => {
 describe('readPostImageSizes', () => {
   it('measures root-local Markdown images with every supported title form', () => {
     const markdown = [
-      '![plain](AI.png)',
-      '![double](/AI.png "Social card")',
-      "![single](/AI.png 'Social card')",
-      '![parenthesized](</AI.png> (Social card))',
+      '![plain](og.png)',
+      '![double](/og.png "Social card")',
+      "![single](/og.png 'Social card')",
+      '![parenthesized](</og.png> (Social card))',
     ].join('\n');
 
     expect(readPostImageSizes(markdown)).toEqual({
-      '/AI.png': { width: 1200, height: 630 },
+      '/og.png': { width: 1200, height: 630 },
     });
   });
 
   it('keeps query-bearing src values as renderer lookup keys', () => {
     expect(
-      readPostImageSizes('![card](/AI.png?v=2#preview "Version 2")'),
+      readPostImageSizes('![card](/og.png?v=2#preview "Version 2")'),
     ).toEqual({
-      '/AI.png?v=2#preview': { width: 1200, height: 630 },
+      '/og.png?v=2#preview': { width: 1200, height: 630 },
     });
   });
 

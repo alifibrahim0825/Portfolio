@@ -32,7 +32,7 @@ const profile = JSON.parse(
   await readFile(join(process.cwd(), 'src/data/profile.json'), 'utf8'),
 );
 
-const OUTPUT = join(process.cwd(), 'public', 'AI.png');
+const OUTPUT = join(process.cwd(), 'public', 'og.png');
 const METADATA_OUTPUT = join(process.cwd(), 'public', 'og.meta.json');
 const SIZE = { width: 1200, height: 630 };
 const PROFILE_SNAPSHOT = ogProfileSnapshot(profile);

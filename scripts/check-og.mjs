@@ -8,7 +8,7 @@ import { ogProfileSnapshot } from './og-profile.mjs';
 const root = process.cwd();
 const EXPECTED_SIZE = { width: 1200, height: 630 };
 const [image, metadata, profile, generatorSource] = await Promise.all([
-  readFile(join(root, 'public', 'AI.png')),
+  readFile(join(root, 'public', 'og.png')),
   readFile(join(root, 'public', 'og.meta.json'), 'utf8').then(JSON.parse),
   readFile(join(root, 'src', 'data', 'profile.json'), 'utf8').then(JSON.parse),
   readFile(join(root, 'scripts', 'generate-og.mjs'), 'utf8'),
@@ -19,7 +19,7 @@ if (
   image.readUInt32BE(0) !== 0x89504e47 ||
   image.toString('ascii', 12, 16) !== 'IHDR'
 ) {
-  throw new Error('public/AI.png is not a valid PNG with an IHDR header');
+  throw new Error('public/og.png is not a valid PNG with an IHDR header');
 }
 
 const actualSize = {
@@ -39,7 +39,7 @@ if (
   JSON.stringify(actualSize) !== JSON.stringify(EXPECTED_SIZE)
 ) {
   throw new Error(
-    `AI.png must be ${EXPECTED_SIZE.width}x${EXPECTED_SIZE.height}; found ` +
+    `og.png must be ${EXPECTED_SIZE.width}x${EXPECTED_SIZE.height}; found ` +
       `${actualSize.width}x${actualSize.height}, while metadata expects ` +
       `${metadata.size?.width}x${metadata.size?.height}.`,
   );
@@ -48,20 +48,20 @@ if (
 if (JSON.stringify(expectedProfile) !== JSON.stringify(metadata.profile)) {
   throw new Error(
     'The share-card profile facts are stale. Run `npm run og` and commit ' +
-      'public/AI.png plus public/og.meta.json.',
+      'public/og.png plus public/og.meta.json.',
   );
 }
 
 if (metadata.generatorDigest !== expectedGeneratorDigest) {
   throw new Error(
     'The share-card generator changed without a regenerated image. Run ' +
-      '`npm run og` and commit public/AI.png plus public/og.meta.json.',
+      '`npm run og` and commit public/og.png plus public/og.meta.json.',
   );
 }
 
 if (metadata.imageDigest !== expectedImageDigest) {
   throw new Error(
-    'public/AI.png does not match public/og.meta.json. Run `npm run og` and ' +
+    'public/og.png does not match public/og.meta.json. Run `npm run og` and ' +
       'commit both generated files.',
   );
 }

@@ -27,7 +27,7 @@ export const SITE_IMAGE_DIMENSIONS = {
  * the metadata route emits an extensionless file that GitHub Pages serves as
  * application/octet-stream.
  */
-export const SHARE_IMAGE_PATH = '/AI.png';
+export const SHARE_IMAGE_PATH = '/og.png';
 export const SHARE_IMAGE_DIMENSIONS = {
   width: 1200,
   height: 630,
