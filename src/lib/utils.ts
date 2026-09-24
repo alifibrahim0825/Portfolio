@@ -5,17 +5,18 @@
 import profile from '@/data/profile.json';
 
 // Site configuration
-export const SITE_URL = 'https://mldangelo.com';
+// Update this if you move to a custom domain. Canonical URLs, sitemap, and
+// share metadata all derive from it.
+export const SITE_URL = 'https://personal-site.alifibrahim0825.workers.dev';
 export const AUTHOR_NAME = profile.name;
-export const TWITTER_HANDLE = '@dangelosaurus';
 /**
  * The portrait. Used for JSON-LD `image`, where the value should be a picture
  * of the person, not a designed card.
  */
-export const SITE_IMAGE_PATH = '/images/me.jpg';
+export const SITE_IMAGE_PATH = '/images/alif.png';
 export const SITE_IMAGE_DIMENSIONS = {
-  width: 1024,
-  height: 1024,
+  width: 743,
+  height: 743,
 } as const;
 
 /**

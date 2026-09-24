@@ -15,32 +15,23 @@ describe('Hero', () => {
     render(<Hero />);
 
     const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toHaveTextContent("Michael D'Angelo");
+    expect(heading).toHaveTextContent('Alif Ibrahim');
   });
 
-  it('describes the current work and Promptfoo joining OpenAI', () => {
+  it('describes the current school and internship', () => {
     const { container } = render(<Hero />);
 
-    const openAiLink = screen.getByRole('link', { name: /openai/i });
-    expect(openAiLink).toHaveAttribute('href', 'https://openai.com');
-    expect(openAiLink).toHaveClass('hero-highlight');
+    const schoolLink = screen.getByRole('link', { name: /smk wikrama bogor/i });
+    expect(schoolLink).toHaveAttribute('href', 'https://smkwikrama.sch.id/');
+    expect(schoolLink).toHaveClass('hero-highlight');
 
-    const promptfooLink = screen.getByRole('link', { name: /promptfoo/i });
-    expect(promptfooLink).toHaveAttribute('href', 'https://promptfoo.dev');
-    expect(promptfooLink).toHaveClass('hero-highlight');
+    const employerLink = screen.getByRole('link', { name: /energyx369/i });
+    expect(employerLink).toHaveAttribute('href', 'https://www.energyx.co.id/');
+    expect(employerLink).toHaveClass('hero-highlight');
 
-    const codexSecurityLink = screen.getByRole('link', {
-      name: 'Codex Security',
-    });
-    expect(codexSecurityLink).toHaveAttribute(
-      'href',
-      'https://openai.com/index/codex-security-now-in-research-preview/',
-    );
-    expect(codexSecurityLink).toHaveClass('hero-highlight');
-
-    expect(container.querySelector('.hero-tagline')).toHaveTextContent(
-      "I'm a Member of the Technical Staff at OpenAI, working on Promptfoo and Codex Security. I help secure AI systems and use AI to find software vulnerabilities. I co-founded Promptfoo before it joined OpenAI in 2026.",
-    );
+    const tagline = container.querySelector('.hero-tagline');
+    expect(tagline).toHaveTextContent('Full Stack Developer');
+    expect(tagline).not.toHaveTextContent(/openai|promptfoo/i);
   });
 
   it('keeps personal stats and incomplete credential lists off the homepage', () => {
@@ -58,9 +49,9 @@ describe('Hero', () => {
   it('renders one primary CTA and one quieter resume link', () => {
     render(<Hero />);
 
-    const aboutButton = screen.getByRole('link', { name: /about me/i });
-    expect(aboutButton).toHaveAttribute('href', '/about');
-    expect(aboutButton).toHaveClass('button');
+    const contactButton = screen.getByRole('link', { name: /contact me/i });
+    expect(contactButton).toHaveAttribute('href', '/contact');
+    expect(contactButton).toHaveClass('button');
 
     const resumeButton = screen.getByRole('link', { name: /view resume/i });
     expect(resumeButton).toHaveAttribute('href', '/resume');

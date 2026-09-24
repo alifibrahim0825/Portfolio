@@ -32,7 +32,7 @@ describe('Navigation', () => {
   it('renders the logo link to home', () => {
     render(<Navigation />);
     const logo = screen.getByRole('link', {
-      name: /michael d'angelo.*home/i,
+      name: /alif ibrahim.*home/i,
     });
     expect(logo).toHaveAttribute('href', '/');
   });
@@ -50,7 +50,9 @@ describe('Navigation', () => {
 
     expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
-    expect(screen.queryByRole('link', { name: /writing/i })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('link', { name: /writing/i }),
+    ).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
     expect(
       screen.queryByRole('link', { name: /archive/i }),

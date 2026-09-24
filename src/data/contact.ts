@@ -1,10 +1,7 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faAngellist } from '@fortawesome/free-brands-svg-icons/faAngellist';
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 
 import profile from './profile.json';
@@ -17,7 +14,7 @@ export interface ContactItem {
 
 const data: ContactItem[] = [
   {
-    link: 'linkedin.com/in/alif-ibrahim-28096b37b',
+    link: 'https://www.linkedin.com/in/alif-ibrahim-28096b37b',
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },
@@ -27,7 +24,7 @@ const data: ContactItem[] = [
     icon: faGithub,
   },
   {
-    link: 'https://www.instagram.com/a.ibraa_?igsh=MW5uN3ZybDMzbWtjYw==',
+    link: 'https://www.instagram.com/a.ibraa_/',
     label: 'Instagram',
     icon: faInstagram,
   },

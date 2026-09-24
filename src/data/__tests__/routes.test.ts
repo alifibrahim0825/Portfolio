@@ -39,7 +39,6 @@ describe('routes', () => {
     expect(paths).toContain('/');
     expect(paths).toContain('/about');
     expect(paths).toContain('/resume');
-    expect(paths).toContain('/projects');
     expect(paths).toContain('/contact');
   });
 
@@ -63,13 +62,5 @@ describe('routes', () => {
     for (const route of navRoutes) {
       expect(route.label.trim().length).toBeGreaterThan(0);
     }
-  });
-
-  it('keeps secondary destinations out of the primary navigation', () => {
-    const secondaryPaths = routes
-      .filter((route) => route.primary === false)
-      .map((route) => route.path);
-
-    expect(secondaryPaths).toEqual(['/stats', '/projects']);
   });
 });
