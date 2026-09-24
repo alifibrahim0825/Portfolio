@@ -15,10 +15,10 @@ const [CONTACT_LOCAL_PART, CONTACT_DOMAIN] = CONTACT_ADDRESS.split('@');
 
 const messages = [
   CONTACT_LOCAL_PART,
-  "hello",
-  "hi",
-  "lets-work-together",
-  "thank-you",
+  'hello',
+  'hi',
+  'lets-work-together',
+  'thank-you',
 ];
 
 function useInterval(callback: () => void, delay: number | null) {

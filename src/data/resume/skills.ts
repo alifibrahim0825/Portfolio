@@ -53,6 +53,26 @@ const skills: Skill[] = [
     competency: 3,
     category: ['Web Development'],
   },
+  {
+    title: 'React',
+    competency: 3,
+    category: ['Web Development'],
+  },
+  {
+    title: 'Laravel',
+    competency: 3,
+    category: ['Web Development'],
+  },
+  {
+    title: 'PHP',
+    competency: 3,
+    category: ['Languages', 'Web Development'],
+  },
+  {
+    title: 'JavaScript',
+    competency: 4,
+    category: ['Languages', 'Web Development'],
+  },
   // Databases
   {
     title: 'PostgreSQL',

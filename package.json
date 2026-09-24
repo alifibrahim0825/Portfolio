@@ -1,11 +1,11 @@
 {
   "name": "personal-site",
   "version": "4.1.0",
-  "homepage": "https://mldangelo.com/",
+  "homepage": "https://personal-site.alifibrahim0825.workers.dev/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mldangelo/personal-site.git"
+    "url": "https://github.com/alifibrahim0825/Portfolio.git"
   },
   "engines": {
     "node": "^22.13.0 || >=24.0.0"

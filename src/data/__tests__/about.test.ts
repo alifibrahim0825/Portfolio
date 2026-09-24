@@ -3,61 +3,33 @@ import { describe, expect, it } from 'vitest';
 import { aboutMarkdown } from '../about';
 
 describe('about data', () => {
-  it('exports aboutMarkdown as a string', () => {
+  it('exports aboutMarkdown as a non-empty string', () => {
     expect(typeof aboutMarkdown).toBe('string');
     expect(aboutMarkdown.length).toBeGreaterThan(0);
   });
 
-  it('contains the intro section', () => {
-    expect(aboutMarkdown).toContain('# Intro');
-    expect(aboutMarkdown).toContain('OpenAI');
-    expect(aboutMarkdown).toContain('Promptfoo');
+  it.each([
+    '# Intro',
+    '# Some History',
+    '# I Like',
+    '# Travel / Location',
+    '# Fun Facts',
+    '# I Dream Of',
+  ])('contains the "%s" section exactly once', (heading) => {
+    const matches = aboutMarkdown
+      .split('\n')
+      .filter((line) => line === heading);
+    expect(matches).toHaveLength(1);
   });
 
-  it('contains the history section', () => {
-    expect(aboutMarkdown).toContain('# Some History');
-    expect(aboutMarkdown).toContain('MS-DOS');
+  it('mentions the current internship and location', () => {
+    expect(aboutMarkdown).toContain('EnergyX369');
+    expect(aboutMarkdown).toContain('Bogor, Indonesia');
   });
 
-  it('contains the likes section', () => {
-    expect(aboutMarkdown).toContain('# I Like');
-    expect(aboutMarkdown).toContain('Running');
-    expect(aboutMarkdown).toContain('Skiing');
-  });
-
-  it('contains the travel section', () => {
-    expect(aboutMarkdown).toContain('# Travel / Geography');
-    expect(aboutMarkdown).toContain('Buffalo, New York');
-  });
-
-  it('contains the fun facts section', () => {
-    expect(aboutMarkdown).toContain('# Fun Facts');
-  });
-
-  it('contains the dreams section', () => {
-    expect(aboutMarkdown).toContain('# I Dream Of');
-    expect(aboutMarkdown).toContain('Staying curious');
-  });
-
-  it('contains the admired websites section', () => {
-    expect(aboutMarkdown).toContain('# Websites from People I Admire');
-  });
-
-  it('contains valid markdown links', () => {
-    // Check for markdown link format [text](url)
-    const linkRegex = /\[.+?\]\(.+?\)/g;
-    const links = aboutMarkdown.match(linkRegex);
-
-    expect(links).not.toBeNull();
-    expect(links!.length).toBeGreaterThan(10);
-  });
-
-  it('contains properly formatted headers', () => {
-    // Check for markdown headers
-    const headerRegex = /^#+ .+$/gm;
-    const headers = aboutMarkdown.match(headerRegex);
-
-    expect(headers).not.toBeNull();
-    expect(headers!.length).toBeGreaterThan(5);
+  it('has no leftover template content', () => {
+    expect(aboutMarkdown).not.toMatch(
+      /OpenAI|Promptfoo|MS-DOS|Buffalo|commit history|afraid to share/,
+    );
   });
 });

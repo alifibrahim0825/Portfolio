@@ -17,7 +17,7 @@ import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
-  description: `${AUTHOR_NAME}'s Resume. OpenAI, Promptfoo, Smile ID, Arthena, Matroid, Stanford ICME, YC alum.`,
+  description: `${AUTHOR_NAME}'s Resume. Full Stack Developer and vocational high school student in Bogor, Indonesia, with experience in React, Next.js, Laravel, Node.js, and Python.`,
   path: '/resume/',
 });
 
@@ -28,9 +28,12 @@ export default function ResumePage() {
         <header className="resume-header">
           <h1 className="resume-title">Resume</h1>
           <p className="resume-summary">
-            Full Stack Developer passionate about building modern web applications and AI-powered solutions. 
-            I specialize in React, Next.js, Laravel, Node.js, and Python, creating scalable, responsive, and user-friendly digital experiences. 
-            I'm always learning new technologies and enjoy turning ideas into real products.
+            Full Stack Developer passionate about building modern web
+            applications and AI-powered solutions. I specialize in React,
+            Next.js, Laravel, Node.js, and Python, creating scalable,
+            responsive, and user-friendly digital experiences. I&apos;m always
+            learning new technologies and enjoy turning ideas into real
+            products.
           </p>
           {/* Print-only, but real markup rather than CSS `content`, so it is
               selectable, linkable, and reads from the shared profile. The
@@ -40,7 +43,9 @@ export default function ResumePage() {
             <span aria-hidden="true"> · </span>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
             <span aria-hidden="true"> · </span>
-            <a href="https://github.com/mldangelo">github.com/mldangelo</a>
+            <a href="https://github.com/alifibrahim0825">
+              github.com/alifibrahim0825
+            </a>
           </address>
         </header>
 

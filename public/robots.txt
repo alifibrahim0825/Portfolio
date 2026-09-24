@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /api
 
-Sitemap: https://mldangelo.com/sitemap.xml
+Sitemap: https://personal-site.alifibrahim0825.workers.dev/sitemap.xml

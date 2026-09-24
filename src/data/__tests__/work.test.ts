@@ -71,14 +71,6 @@ describe('work data', () => {
     }
   });
 
-  it('has positions from different years', () => {
-    const years = work.map((job) => new Date(job.startDate).getFullYear());
-    const uniqueYears = new Set(years);
-
-    // Resume should contain work from multiple years
-    expect(uniqueYears.size).toBeGreaterThan(1);
-  });
-
   it('company names are non-empty', () => {
     for (const job of work) {
       expect(job.name.trim().length).toBeGreaterThan(0);

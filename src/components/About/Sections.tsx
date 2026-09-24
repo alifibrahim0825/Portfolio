@@ -66,7 +66,7 @@ interface ParsedAboutSection {
  */
 const sectionVariants: Record<string, string> = {
   'Some History': 'about-section--log',
-  'Travel / Geography': 'about-section--log',
+  'Travel / Location': 'about-section--log',
   'Fun Facts': 'about-section--compact',
   'I Like': 'about-section--compact',
   'I Dream Of': 'about-section--compact',

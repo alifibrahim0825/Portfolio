@@ -14,23 +14,31 @@ export default function Hero() {
           </h1>
 
           <p className="hero-tagline">
-            I&apos;m a {profile.role} at{' '}
-            <a href="https://openai.com" className="hero-highlight">
-              {profile.employer}
+            I&apos;m a {profile.role} and a vocational high school student at{' '}
+            <a
+              href="https://smkwikrama.sch.id/"
+              className="hero-highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SMK Wikrama Bogor
             </a>
-            , working on{' '}
-            <a href="https://www.energyx.co.id/" className="hero-highlight">
+            , currently interning at{' '}
+            <a
+              href="https://www.energyx.co.id/"
+              className="hero-highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               EnergyX369
-            </a>{' '}
-            and{' '}
-           Vocational high school student passionate about technology,
-            software development, and cybersecurity. I enjoy building projects 
-            and exploring new technologies.
+            </a>
+            . I enjoy building projects and exploring new technologies,
+            especially web development, AI, and cybersecurity.
           </p>
 
           <div className="hero-cta">
-            <Link href="/about" className="button">
-              About Me
+            <Link href="/contact" className="button">
+              Contact Me
             </Link>
             <Link href="/resume" className="hero-resume-link">
               View Resume
